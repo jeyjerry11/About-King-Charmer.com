@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Jerry Samuel | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0a0a0a;
-      color: #fff;
+      background: #0e0e0e;
+      color: #f1f1f1;
     }
 
     .container {
@@ -19,70 +20,105 @@
     }
 
     .sidebar {
-      background: linear-gradient(180deg, #6600cc, #9900ff);
+      background: linear-gradient(180deg, #4b0082, #8000ff);
       padding: 40px 20px;
       width: 100%;
       max-width: 350px;
       text-align: center;
+      flex-shrink: 0;
     }
 
     .sidebar img {
-      width: 220px;
+      width: 180px;
+      max-width: 60%;
       border-radius: 50%;
-      border: 5px solid #ffffff55;
-      box-shadow: 0 0 15px #fff3;
+      border: 5px solid #ffffff44;
+      box-shadow: 0 0 12px #fff2;
       margin-bottom: 20px;
     }
 
     .sidebar h1 {
-      font-size: 2.2em;
-      margin: 10px 0;
+      font-size: 2em;
+      margin: 10px 0 5px;
     }
 
     .sidebar p {
-      font-size: 1.1em;
-      color: #e0e0e0;
+      font-size: 1em;
+      color: #eaeaea;
+      margin: 5px 0;
     }
 
     .content {
       flex: 1;
       padding: 40px 30px;
+      background: #121212;
     }
 
     .section {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .section h2 {
-      font-size: 1.8em;
+      font-size: 1.6em;
       margin-bottom: 15px;
-      color: #66ffcc;
+      color: #66ffe0;
+    }
+
+    .section p {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #ccc;
     }
 
     .project {
-      background-color: #1a1a1a;
+      background-color: #1c1c1c;
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 20px;
       border: 1px solid #333;
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px #66ffe044;
     }
 
     .project h3 {
       margin: 0 0 10px;
+      color: #fff;
     }
 
     .project a {
-      color: #66ffcc;
+      color: #66ffe0;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    a:hover {
+    .project a:hover {
       text-decoration: underline;
     }
 
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+      }
+
+      .sidebar {
+        max-width: 100%;
+        padding: 30px 15px;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+
+      .sidebar img {
+        width: 140px;
+      }
+
+      .section h2 {
+        font-size: 1.4em;
       }
     }
   </style>
@@ -126,7 +162,7 @@
 
       <div class="section">
         <h2>📬 Contact</h2>
-        <p>Email: holicworkera@gmail.com</p>
+        <p>Email: <a href="mailto:holicworkera@gmail.com" style="color:#66ffe0;">holicworkera@gmail.com</a></p>
         <p>Location: Lagos, Nigeria</p>
       </div>
     </div>
