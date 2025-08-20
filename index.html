@@ -1,171 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jerry Samuel | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>King Charmer Portfolio</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #222;
     }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 100vh;
-    }
-
-    .sidebar {
-      background: linear-gradient(180deg, #4b0082, #8000ff);
-      padding: 40px 20px;
-      width: 100%;
-      max-width: 350px;
+    header {
+      background: linear-gradient(135deg, #000, #444);
+      color: white;
+      padding: 2rem;
       text-align: center;
-      flex-shrink: 0;
     }
-
-    .sidebar img {
-      width: 180px;
-      max-width: 60%;
-      border-radius: 50%;
-      border: 5px solid #ffffff44;
-      box-shadow: 0 0 12px #fff2;
-      margin-bottom: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
-
-    .sidebar h1 {
-      font-size: 2em;
-      margin: 10px 0 5px;
+    header p {
+      margin-top: .5rem;
+      font-size: 1.1rem;
     }
-
-    .sidebar p {
-      font-size: 1em;
-      color: #eaeaea;
-      margin: 5px 0;
-    }
-
-    .content {
-      flex: 1;
-      padding: 40px 30px;
-      background: #121212;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      font-size: 1.6em;
-      margin-bottom: 15px;
-      color: #66ffe0;
-    }
-
-    .section p {
-      font-size: 1em;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    .project {
-      background-color: #1c1c1c;
-      padding: 20px;
+    .container {
+      width: 95%;
+      max-width: 800px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background: white;
       border-radius: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #333;
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 10px #66ffe044;
+    h2 {
+      margin-top: 0;
     }
-
-    .project h3 {
-      margin: 0 0 10px;
-      color: #fff;
+    .skills span {
+      display: inline-block;
+      background: #222;
+      color: white;
+      padding: .3rem .7rem;
+      margin: .3rem;
+      border-radius: 15px;
+      font-size: .9rem;
     }
-
-    .project a {
-      color: #66ffe0;
-      text-decoration: none;
+    .portfolio input {
+      margin-top: .5rem;
+      display: block;
+    }
+    .chat {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .chat a {
+      display: inline-block;
+      padding: .7rem 1.5rem;
+      border-radius: 30px;
+      background: #25D366;
+      color: white;
       font-weight: bold;
+      text-decoration: none;
     }
-
-    .project a:hover {
-      text-decoration: underline;
+    .comment-section {
+      margin-top: 2rem;
     }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        max-width: 100%;
-        padding: 30px 15px;
-      }
-
-      .content {
-        padding: 30px 20px;
-      }
-
-      .sidebar img {
-        width: 140px;
-      }
-
-      .section h2 {
-        font-size: 1.4em;
-      }
+    .comment-box {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+    .comment-box input {
+      flex: 1;
+      padding: .5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .comment-box button {
+      margin-left: .5rem;
+      padding: .5rem 1rem;
+      border: none;
+      background: #000;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .comment {
+      background: #f1f1f1;
+      padding: .7rem;
+      border-radius: 10px;
+      margin: .5rem 0;
+      position: relative;
+    }
+    .comment .delete {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      color: red;
+    }
+    .comment .like {
+      margin-top: .5rem;
+      cursor: pointer;
+      color: blue;
+      font-size: .9rem;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>King Charmer</h1>
+    <p>Freelancer • Innovator • Visionary</p>
+  </header>
+
   <div class="container">
-    <div class="sidebar">
-      <img src="https://i.imgur.com/gc1u6jO.png" alt="Cartoon King Avatar">
-      <h1>Jerry Samuel</h1>
-      <p>💻 Full-Stack Developer</p>
-      <p>🚀 Building the future one line at a time</p>
-    </div>
+    <h2>About Me</h2>
+    <p>
+      I’m <b>King Charmer</b>, a creative freelance mind building projects that blend tech, vision, and real-world impact.  
+      Always chasing big moves, I’m shaping my own way forward.  
+    </p>
+    <p>
+      <!-- 🔗 Change this address link to your actual map location -->
+      📍 Address: <a href="https://www.google.com/maps?q=Lagos+Nigeria" target="_blank">Lagos, Nigeria</a> <br/>
 
-    <div class="content">
-      <div class="section">
-        <h2>👨‍💻 About Me</h2>
-        <p>I’m a passionate developer skilled in HTML, CSS, JavaScript, Node.js, and MongoDB. I love building fast, responsive, and modern web experiences — from static websites to full backend dashboards. I believe in clean code, smart design, and delivering beyond expectations.</p>
-      </div>
+      <!-- 📧 Change this email -->
+      📧 Email: <a href="mailto:parkjimmm205@gmsil.com">parkjimmm205@gms</a> <br/>
 
-      <div class="section">
-        <h2>📂 Projects</h2>
+      <!-- 📱 Change this phone number -->
+      📱 Phone: <a href="tel:+234 7086312481">+234 7087312481</a>
+    </p>
+  </div>
 
-        <div class="project">
-          <h3>🎥 Video Streaming UI</h3>
-          <p>Responsive frontend with Node.js backend and MongoDB for tracking stream data.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h3>💸 Crypto & Giftcard Demo</h3>
-          <p>Business static site with redeem forms, styled for mobile and easy interaction.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-
-        <div class="project">
-          <h3>📈 Investment Platform</h3>
-          <p>Full system with register, upload, track balance, and withdrawal dashboard features.</p>
-          <a href="#">View on GitHub</a>
-        </div>
-      </div>
-
-      <div class="section">
-        <h2>📬 Contact</h2>
-        <p>Email: <a href="mailto:holicworkera@gmail.com" style="color:#66ffe0;">holicworkera@gmail.com</a></p>
-        <p>Location: Lagos, Nigeria</p>
-      </div>
+  <div class="container">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <span>Frontend (HTML, CSS, JS)</span>
+      <span>Backend (Node.js, Express, MongoDB)</span>
+      <span>Flutterwave API</span>
+      <span>Bitcoin App Development</span>
+      <span>UI/UX Design</span>
+      <span>Creative Writing</span>
     </div>
   </div>
+
+  <div class="container portfolio">
+    <h2>Portfolio</h2>
+    <p>Upload new work:</p>
+    <!-- 🔧 These file inputs are placeholders, later you can connect them to cloud storage -->
+    <input type="file" accept="image/*" />
+    <input type="file" accept="video/*" />
+  </div>
+
+  <div class="chat">
+    <!-- 🔗 Change this WhatsApp link with your number -->
+    <a href="https://wa.me/2348000000000" target="_blank">Chat with Admin</a>
+    <p style="font-size: 0.9rem; color: gray;">(Soon to be replaced with King Charmer Chat 🔥)</p>
+  </div>
+
+  <div class="container comment-section">
+    <h2>Comments</h2>
+    <div class="comment-box">
+      <input type="text" id="commentInput" placeholder="Write something about King Charmer...">
+      <button onclick="postComment()">Post</button>
+    </div>
+    <div id="comments"></div>
+  </div>
+
+  <script>
+    // Request Notification Permission
+    if ("Notification" in window) {
+      if (Notification.permission !== "granted") {
+        Notification.requestPermission();
+      }
+    }
+
+    // Comments Logic
+    function postComment() {
+      let input = document.getElementById("commentInput");
+      let text = input.value.trim();
+      if (text === "") return;
+      let div = document.createElement("div");
+      div.className = "comment";
+      div.innerHTML = text + 
+        '<span class="delete" onclick="deleteComment(this)">✖</span>' +
+        '<div class="like" onclick="likeComment(this)">👍 Like</div>';
+      document.getElementById("comments").appendChild(div);
+      input.value = "";
+
+      // Show notification
+      if (Notification.permission === "granted") {
+        new Notification("New comment posted!", { body: text });
+      }
+    }
+
+    function deleteComment(el) {
+      el.parentElement.remove();
+    }
+
+    function likeComment(el) {
+      if (el.innerHTML.includes("👍")) {
+        el.innerHTML = "❤️ Liked";
+      } else {
+        el.innerHTML = "👍 Like";
+      }
+    }
+  </script>
+
 </body>
 </html>
